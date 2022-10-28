@@ -1,0 +1,35 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'natflix'
+      MYSQL_USER: 'test'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    depends_on:
+      - db
+    image: 'openjdk:latest'
+    container_name: back-end-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./natflix-backend:/javaSource
+    command: sh -c "cd /javaSource; ./mvnw spring-boot:run"
+
+  frontend:
+    depends_on:
+      - backend
+    image: 'node:latest'
+    container_name: front-end-server
+    volumes:
+      - ./natflix-frontend:/frontend
+    ports:
+      - "3000:3000"
+    command: sh -c "cd /frontend ;npm install; npm run start"
