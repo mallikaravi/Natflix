@@ -15,21 +15,23 @@ services:
   backend:
     depends_on:
       - db
-    image: 'openjdk:latest'
-    container_name: back-end-server
+    image: natflix-backend-server:1.1
+    container_name: natflix-backend-server
+    restart: on-failure
     ports:
       - "8080:8080"
-    volumes:
-      - ./natflix-backend:/javaSource
-    command: sh -c "cd /javaSource; ./mvnw spring-boot:run"
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
 
   frontend:
     depends_on:
       - backend
-    image: 'node:latest'
-    container_name: front-end-server
-    volumes:
-      - ./natflix-frontend:/frontend
+    image: natflix-frontend-server:1.1
+    container_name: frontend-server
+    restart: on-failure
     ports:
       - "3000:3000"
-    command: sh -c "cd /frontend ;npm install; npm run start"
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
