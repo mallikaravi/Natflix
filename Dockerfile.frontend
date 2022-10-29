@@ -8,7 +8,6 @@ COPY natflix-frontend /usr/src/app/
 WORKDIR /usr/src/app
 
 # Install dependecies
-RUN ls -ltra /usr/src/app
 RUN npm cache clean --force
 RUN npm install 
 
