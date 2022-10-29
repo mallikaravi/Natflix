@@ -65,8 +65,9 @@ public class SecurityConfiguration implements WebMvcConfigurer {
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().authorizeRequests()
 				.antMatchers("/api/user/**").permitAll()
-				.antMatchers("/api/content/**").authenticated()
-				.antMatchers("/api/admin-content/**").authenticated()
+				.antMatchers("/api/content/**").permitAll() 
+				//authenticated()shall be used only when frontend able to send the authentication token
+				.antMatchers("/api/admin-content/**").permitAll()
 				.anyRequest().permitAll();
 
 		http.authenticationProvider(authenticationProvider());

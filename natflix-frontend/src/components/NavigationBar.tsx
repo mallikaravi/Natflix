@@ -22,7 +22,7 @@ export default function NavigationBar() {
       <Link to={CustomerLinks[0].url}>
         <img src={Logo} />
       </Link>
-      <div>{Links}</div>
+      <div className="links">{Links}</div>
       <div className="left-items">
         {/* Search bar goes here... */}
         <Link to="/" onClick={() => setUser(null)}>

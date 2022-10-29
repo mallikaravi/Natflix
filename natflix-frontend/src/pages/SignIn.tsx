@@ -1,6 +1,6 @@
 // Node modules
 import { FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 
 // Project files
 import ListInput from "components/ListInput";
@@ -11,6 +11,7 @@ import { useUser } from "state/UserContext";
 export default function Login() {
   // Global state
   const { user, setUser } = useUser();
+  const navigate = useNavigate();
 
   // Local state
   const [form, setForm] = useState({ email: "", password: "" });
@@ -21,7 +22,8 @@ export default function Login() {
   // Methods
   function onSubmit(event: FormEvent): void {
     event.preventDefault();
-
+    navigate("/"); 
+ 
     fetch(endPoint, {
       method: "POST",
       headers: {

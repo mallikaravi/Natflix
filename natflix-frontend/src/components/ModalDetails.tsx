@@ -39,11 +39,11 @@ export default function ModalDetails({ item }: iProps) {
 
   let endPoint = "";
   if (type_id === eContentType.SERIES) {
-    endPoint = "admin-details-series/" + id;
+    endPoint = "details-series/" + id;
   } else if (type_id === eContentType.MOVIES) {
-    endPoint = "admin-details-movies/" + id;
+    endPoint = "details-movies/" + id;
   } else {
-    endPoint = "admin-details-documentaries/" + id;
+    endPoint = "details-documentaries/" + id;
   }
 
   // Methods

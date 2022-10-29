@@ -12,7 +12,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -101,13 +100,13 @@ public class UserController {
     }
 
     @GetMapping("/user")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public List<User> findAll() throws NatflixException {
         return userRepository.findAll();
     }
 
     @GetMapping("/user/{id}")
-    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
     public ResponseEntity<User> getUsersById(@PathVariable(value = "id") Long userId) throws NatflixException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NatflixException(HttpStatus.NOT_FOUND, "User not found on :: " + userId));
@@ -115,7 +114,7 @@ public class UserController {
     }
 
     @PutMapping("/user/{id}")
-    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
     public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long userId, @RequestBody User updateRequest)
             throws NatflixException {
         updateRequest.setId(userId);
@@ -124,7 +123,7 @@ public class UserController {
     }
 
     @DeleteMapping("/user/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public Map<String, Boolean> deleteUser(@PathVariable(value = "id") Long userId) throws NatflixException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NatflixException(HttpStatus.NOT_FOUND, "User not found on :: " + userId));
