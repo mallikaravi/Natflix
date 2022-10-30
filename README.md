@@ -1,5 +1,3 @@
-[![CI](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ekalinin/github-markdown-toc)
 # Natflix
 ### Build and Generate the JAR file (compile the source code)
 ```
