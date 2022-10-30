@@ -69,6 +69,7 @@ Password: 12345
    * [About](#about)
    * [Project SetUp](#project-setup)
    * [Implementation And Design](#implementation-and-design)
+        * [Architectural Diagram](#architectural-diagram)
         * [UseCase Diagram](#usecase-diagram)
         * [Class Diagram](#class-diagram) 
         * [Model Diagram](#model-diagram)
@@ -92,8 +93,8 @@ About
 ============
 Natflix is  a subscription based streaming device that allows all members to watch Tv shows, series and movies.Natflix provides a frontend web page designed to meet our needs , and we shall start from it. The project is developed by React Typescript. Here we should configure our backend to communicate with the frontend to get the webpage that offers a service  to stream videos to the customers and manage the resources.The backend is developed by usingJava Springboot.There are two roles in the project.They are:
 
-1.Admin
-2.Customer
+1. Admin
+2. Customer
 
 Admin can create,deleteand update the content.Customer can only view the application and play the Movies,Series or Documentaries.
 
@@ -104,7 +105,7 @@ First you’ll need to setup a Springboot project for Maven to build.
 
 Implementation and Design
 ============
-1 .TypeScript – Coding language for implementing the Natflix Frontend application
+1. TypeScript – Coding language for implementing the Natflix Frontend Aplication
 2. React -Framework for building the Graphical User Interface
 3. Eclipse – IDE for backend development
 4. Spring boot- Opensource Framework in Java
@@ -129,8 +130,6 @@ Usecase Diagram
 Class Diagram
 ============
 <img src="design/Class-Diagram.png" width="450" height="250"><br>
-
-
 
 Model Diagram
 ============
