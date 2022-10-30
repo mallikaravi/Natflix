@@ -71,7 +71,7 @@ Password: 12345
         * [Dependencies](#dependencies)
         * [UseCase Diagram](#usecase-diagram)
         * [Class Diagram](#class-diagram) 
-        * [Sequence Diagram](#sequence-diagram)
+        * [Model Diagram](#model-diagram)
    *  [Tool Used For Project Management](#tool-used-for-project-management)
    *  [ReST API Usage](#rest-api-usage)
    *  [Future Enhancement](#future-enhancement)
