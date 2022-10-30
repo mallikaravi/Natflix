@@ -67,8 +67,6 @@ Password: 12345
    * [About](#about)
    * [Project SetUp](#project-setup)
    * [Implementation And Design](#implementation-and-design)
-      * [Define a simple Maven Build](#define-a-simple-maven-build)
-        * [Dependencies](#dependencies)
         * [UseCase Diagram](#usecase-diagram)
         * [Class Diagram](#class-diagram) 
         * [Model Diagram](#model-diagram)
@@ -113,7 +111,13 @@ Implementation and Design
 
 Explained here 
 
-https://github.com/mallikaravi/ATM/blob/main/design/Bank-ATM-Design.pdf
+https://github.com/mallikaravi/Natflix/blob/main/design/Natflix-Documentation.pdf
+
+Usecase Diagram
+============
+<img src="design/Usecase-ATM.png " width="450" height="250">
+
+
 R.eST API Usage
 ============
 Request Method | URI | Body (JSON) | Description |  
