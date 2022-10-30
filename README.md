@@ -158,7 +158,7 @@ DELETE | http://localhost:8080/api/"/admin-content/delete-episode/{id}" | - | De
 DELETE | http://localhost:8080/api/"/admin-content/delete-movies/{id}" | - | Delete Movie |
 DELETE | http://localhost:8080/api/"/admin-content/delete-documentaries/{id}" | - | Delete Movie |
 
-Smaple REST Request JSON format
+Sample REST Request JSON format
 =============
 ```
 API: Content Create/Update
