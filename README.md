@@ -36,7 +36,7 @@ $ npm run start
 #### How to run and build in Docker 
 ```
 $ cd Natflix
-$ docker compose up --build
+$ docker compose up --build --force-recreate
 ```
 #### How to Setup and Access the Database, Backend and Frontend application
 Note: Docker container setup the database enviroenment default data using sql/init.sql file.
