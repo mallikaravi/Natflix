@@ -58,7 +58,9 @@ Note: Docker container setup the database enviroenment default data using sql/in
    - Address: localhost
 
 Natflix Web application URL: http://localhost:3000/<br>
+
 Login: admin@natflix.com 
+
 Password: 12345
 
 # Table of Contents
@@ -157,6 +159,6 @@ JIRA tool is used for this project, mainly maintaining the recipe-manager applic
 - etc.
 
 ### Link to JIRA Activities
-https://github.com/mallikaravi/ATM/blob/main/design/ATM-Jira-dashboard.pdf
+https://github.com/mallikaravi/Natflix/blob/main/design/Jiradashboard-Activities.pdf
 
 Future Enhancement
