@@ -83,7 +83,7 @@ Prerequisites
 * [Spring Boot](http://spring.io/projects/spring-boot) for creating the RESTful Web Services
 * [NPM](https://docs.npmjs.com/about-npm) the package manager for the Node JavaScript platform
 * [React](https://docs.retool.com/docs) for building web application.
-* [Postgres](https://www.mysql.com/downloads/) as database
+* [Mysql](https://www.mysql.com/downloads/) as database
 * [Docker](https://www.docker.com/) for building and managing the application distribution using containers
 * [Postman](https://www.postman.com/downloads/) Postman is an API platform for developers to design, build, test and iterate their APIs
 
@@ -158,7 +158,7 @@ DELETE | http://localhost:8080/api/"/admin-content/delete-episode/{id}" | - | De
 DELETE | http://localhost:8080/api/"/admin-content/delete-movies/{id}" | - | Delete Movie |
 DELETE | http://localhost:8080/api/"/admin-content/delete-documentaries/{id}" | - | Delete Movie |
 
-Smaple REST Request JSON format
+Sample REST Request JSON format
 =============
 ```
 API: Content Create/Update
