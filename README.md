@@ -35,7 +35,7 @@ $ cd natflix-frontend
 $ npm install
 $ npm run start
 ```
-## Adapted Docker containerization 
+## How to run and build Docker 
 ```
 $ cd Natflix
 $ docker compose up --build
@@ -58,7 +58,8 @@ Note: Docker container setup the database enviroenment default data using sql/in
    - Address: localhost
 
 Natflix Web application URL: http://localhost:3000/<br>
-Login: admin@natflix.com / 12345
+Login: admin@natflix.com 
+Password: 12345
 
 Prerequisites
 ============
