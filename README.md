@@ -1,7 +1,7 @@
+[![CI](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ekalinin/github-markdown-toc)
 # Natflix
-#TOC
-
-## Build and Generate the JAR file (compile the source code)
+### Build and Generate the JAR file (compile the source code)
 ```
 # Git clone (download the soruce code)
 $ git clone https://github.com/mallikaravi/Natflix.git
@@ -35,12 +35,12 @@ $ cd natflix-frontend
 $ npm install
 $ npm run start
 ```
-## How to run and build Docker 
+#### How to run and build in Docker 
 ```
 $ cd Natflix
 $ docker compose up --build
 ```
-## How to Setup and Access the Database, Backend and Frontend application
+#### How to Setup and Access the Database, Backend and Frontend application
 Note: Docker container setup the database enviroenment default data using sql/init.sql file.
 
 - Database: 
@@ -61,6 +61,22 @@ Natflix Web application URL: http://localhost:3000/<br>
 Login: admin@natflix.com 
 Password: 12345
 
+# Table of Contents
+<!--ts-->
+   * [Prerequisites](#prerequisites)
+   * [About](#about)
+   * [Project SetUp](#project-setup)
+   * [Implementation And Design](#implementation-and-design)
+      * [Define a simple Maven Build](#define-a-simple-maven-build)
+        * [Dependencies](#dependencies)
+        * [UseCase Diagram](#usecase-diagram)
+        * [Class Diagram](#class-diagram) 
+        * [Sequence Diagram](#sequence-diagram)
+   *  [Tool Used For Project Management](#tool-used-for-project-management)
+   *  [ReST API Usage](#rest-api-usage)
+   *  [Future Enhancement](#future-enhancement)
+      
+<!--te-->
 Prerequisites
 ============
 * JDK 17.0.2
@@ -72,8 +88,8 @@ Prerequisites
 * [Docker](https://www.docker.com/) for building and managing the application distribution using containers
 * [Postman](https://www.postman.com/downloads/) Postman is an API platform for developers to design, build, test and iterate their APIs
 
-## ReST API Usage
-
+ReST API Usage
+============
 Request Method | URI | Body (JSON) | Description |  
 :---: | :--- | :---: | :--- |
 POST | http://localhost:8080/api/login | {username: ""....} | Login as a admin . | 
@@ -96,5 +112,3 @@ DELETE | http://localhost:8080/api/"/admin-content/delete-series/{id}" | - | Del
 DELETE | http://localhost:8080/api/"/admin-content/delete-episode/{id}" | - | Delete Episode |
 DELETE | http://localhost:8080/api/"/admin-content/delete-movies/{id}" | - | Delete Movie |
 DELETE | http://localhost:8080/api/"/admin-content/delete-documentaries/{id}" | - | Delete Movie |
-
-
