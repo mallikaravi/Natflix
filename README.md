@@ -115,8 +115,13 @@ https://github.com/mallikaravi/Natflix/blob/main/design/Natflix-Documentation.pd
 
 Usecase Diagram
 ============
-<img src="design/Usecase-ATM.png " width="450" height="250">
+<img src="design/Usecase-natflix.pdf " width="450" height="250">
 
+Class Diagram
+============
+
+Model Diagram
+============
 
 R.eST API Usage
 ============
@@ -142,3 +147,16 @@ DELETE | http://localhost:8080/api/"/admin-content/delete-series/{id}" | - | Del
 DELETE | http://localhost:8080/api/"/admin-content/delete-episode/{id}" | - | Delete Episode |
 DELETE | http://localhost:8080/api/"/admin-content/delete-movies/{id}" | - | Delete Movie |
 DELETE | http://localhost:8080/api/"/admin-content/delete-documentaries/{id}" | - | Delete Movie |
+
+Tool used for project management
+============
+JIRA tool is used for this project, mainly maintaining the recipe-manager application backlogs. In sort following activities are done
+- EPIC
+- User stories
+- Sprint handling
+- etc.
+
+### Link to JIRA Activities
+https://github.com/mallikaravi/ATM/blob/main/design/ATM-Jira-dashboard.pdf
+
+Future Enhancement
