@@ -211,5 +211,4 @@ public class AdminContentController {
 			default -> throw new IllegalArgumentException("Unexpected value: " + contentRequest.getTypeId());
 		}
 	}
-
 }
