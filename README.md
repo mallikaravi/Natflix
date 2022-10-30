@@ -125,15 +125,15 @@ Architecture flow of Sprint boot application and React Web application <br>
 
 Usecase Diagram
 ============
-<img src="design/UseCase-Diagram.png" width="450" height="250">
+<img src="design/UseCase-Diagram.PNG" width="450" height="250">
 
 Class Diagram
 ============
-<img src="design/Class-Diagram.png" width="450" height="250"><br>
+<img src="design/Class-Diagram.PNG" width="450" height="250"><br>
 
 Model Diagram
 ============
-<img src="design/Model-Diagram.png" width="450" height="250">
+<img src="design/Model-Diagram.PNG" width="450" height="250">
 
 REST API Usage
 ============
