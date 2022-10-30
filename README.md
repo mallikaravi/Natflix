@@ -162,3 +162,11 @@ JIRA tool is used for this project, mainly maintaining the recipe-manager applic
 https://github.com/mallikaravi/Natflix/blob/main/design/Jiradashboard-Activities.pdf
 
 Future Enhancement
+============
+1. HOSTING
+Both the backend and the frontend must be deployed on Amazon Web Services.
+2. SHOW THE WATCHED HISTORY
+A user must be able to review their history of the last 10 watched videos. And provide all watched content with a tag.
+3. CUSTOMER OTHER AUTHS
+People hate to create new accounts to access a new service, so in order to help Natflex compete against its rival, the mighty BlockBuster, they ask us if we can also add Facebook, Twitter and/or Gmail login.
+
