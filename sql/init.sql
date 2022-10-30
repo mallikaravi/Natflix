@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `additional_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `additional_details` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `BANNER_URL` varchar(255) DEFAULT NULL,
   `LOGO_URL` varchar(255) DEFAULT NULL,
   `SUMMARY` varchar(255) DEFAULT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `additional_details` (
   `VIDEO_CODE` varchar(255) DEFAULT NULL,
   `POSTER_URL` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `content`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `content` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `CONTENT_TYPE_ID` int DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `CONT_TYPE_ID` (`CONTENT_TYPE_ID`),
@@ -79,10 +79,10 @@ DROP TABLE IF EXISTS `content_category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `content_category` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `CATEGORY` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,10 +103,10 @@ DROP TABLE IF EXISTS `content_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `content_type` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `TYPE` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +127,7 @@ DROP TABLE IF EXISTS `documentaries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `documentaries` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `ADDITIONAL_ID` int DEFAULT NULL,
   `CATEGORY_ID` int DEFAULT NULL,
   `CONTENT_ID` int NOT NULL,
@@ -138,7 +138,7 @@ CREATE TABLE `documentaries` (
   CONSTRAINT `DOC_ADD_ID` FOREIGN KEY (`ADDITIONAL_ID`) REFERENCES `additional_details` (`ID`),
   CONSTRAINT `DOC_CAT_ID` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `content_category` (`ID`),
   CONSTRAINT `DOC_CONTENT_ID` FOREIGN KEY (`CONTENT_ID`) REFERENCES `content` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ DROP TABLE IF EXISTS `episodes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `episodes` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `EPISODE_NUMBER` int DEFAULT NULL,
   `ADDITIONAL_ID` int DEFAULT NULL,
   `SEASON_ID` int NOT NULL,
@@ -168,7 +168,7 @@ CREATE TABLE `episodes` (
   KEY `EPI_SEASON_ID` (`SEASON_ID`),
   CONSTRAINT `EPI_SEASON_ID` FOREIGN KEY (`SEASON_ID`) REFERENCES `seasons` (`ID`),
   CONSTRAINT `EPISODE_ADD_ID` FOREIGN KEY (`ADDITIONAL_ID`) REFERENCES `additional_details` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -211,7 +211,7 @@ DROP TABLE IF EXISTS `movies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `movies` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `OSCAR_WON` int DEFAULT NULL,
   `ADDITIONAL_ID` int DEFAULT NULL,
   `CATEGORY_ID` int DEFAULT NULL,
@@ -223,7 +223,7 @@ CREATE TABLE `movies` (
   CONSTRAINT `MOVIE_ADD_ID` FOREIGN KEY (`ADDITIONAL_ID`) REFERENCES `additional_details` (`ID`),
   CONSTRAINT `MOVIE_CAT_ID` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `content_category` (`ID`),
   CONSTRAINT `MOVIE_CONT_ID` FOREIGN KEY (`CONTENT_ID`) REFERENCES `content` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,10 +244,10 @@ DROP TABLE IF EXISTS `role`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `role` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `ROLE` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,13 +268,13 @@ DROP TABLE IF EXISTS `seasons`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `seasons` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `SEASON_NUMBER` int DEFAULT NULL,
   `SERIES_ID` int NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `SEASON_SERIES_ID` (`SERIES_ID`),
   CONSTRAINT `SEASON_SERIES_ID` FOREIGN KEY (`SERIES_ID`) REFERENCES `series` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -295,7 +295,7 @@ DROP TABLE IF EXISTS `series`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series` (
-  `ID` int NOT NULL,
+  `ID` int NOT NULL  AUTO_INCREMENT,
   `ADDITIONAL_ID` int DEFAULT NULL,
   `CATEGORY_ID` int DEFAULT NULL,
   `CONTENT_ID` int NOT NULL,
@@ -306,7 +306,7 @@ CREATE TABLE `series` (
   CONSTRAINT `SER_CONTENT_ID` FOREIGN KEY (`CONTENT_ID`) REFERENCES `content` (`ID`),
   CONSTRAINT `SERIES_ADD_ID` FOREIGN KEY (`ADDITIONAL_ID`) REFERENCES `additional_details` (`ID`),
   CONSTRAINT `SERIES_CAT_ID` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `content_category` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

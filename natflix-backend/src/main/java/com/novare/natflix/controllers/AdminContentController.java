@@ -4,12 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -36,6 +33,7 @@ import com.novare.natflix.repositories.DocumentariesRepository;
 import com.novare.natflix.repositories.EpisodeRepository;
 import com.novare.natflix.repositories.MoviesRepository;
 import com.novare.natflix.repositories.SeriesRepository;
+import com.novare.natflix.services.IContentService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -54,6 +52,8 @@ public class AdminContentController {
 	private CategoryRepository categoryRepository;
 	@Autowired
 	private EpisodeRepository episodeRepository;
+	@Autowired
+	private IContentService contentService;
 
 	@GetMapping("/admin-content")
 //	@PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
@@ -195,16 +195,22 @@ public class AdminContentController {
 			case 1 -> {
 				Series series = ContentDTO.createSeriesModel(contentRequest);
 				series.setCategory(category);
+				Content findByContentType = contentService.findByContentType(EType.SERIES.name());
+				series.setContent(findByContentType);
 				seriesRepository.save(series);
 			}
 			case 2 -> {
 				Movies movies = ContentDTO.createMoviesModel(contentRequest);
 				movies.setCategory(category);
+				Content findByContentType = contentService.findByContentType(EType.SERIES.name());
+				movies.setContent(findByContentType);
 				moviesRepository.save(movies);
 			}
 			case 3 -> {
 				Documentaries documentaries = ContentDTO.createDocumentModel(contentRequest);
 				documentaries.setCategory(category);
+				Content findByContentType = contentService.findByContentType(EType.SERIES.name());
+				documentaries.setContent(findByContentType);
 				documentariesRepository.save(documentaries);
 			}
 

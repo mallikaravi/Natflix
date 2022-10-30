@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "movies")
 public class Movies {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;
 
@@ -28,11 +28,11 @@ public class Movies {
     @JoinColumn(foreignKey = @ForeignKey(name = "MOVIE_CAT_ID"), name = "CATEGORY_ID", referencedColumnName = "ID")
     private ContentCategory category;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(foreignKey = @ForeignKey(name = "MOVIE_CONT_ID"), name = "CONTENT_ID", referencedColumnName = "ID")
     private Content content;
     
-    @OneToOne(cascade = CascadeType.REFRESH)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(foreignKey = @ForeignKey(name = "MOVIE_ADD_ID"), name = "ADDITIONAL_ID", referencedColumnName = "ID")
     private AdditionalDetails additional;
     

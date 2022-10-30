@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Table(name = "series")
 public class Series {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;
 
@@ -32,7 +32,7 @@ public class Series {
     @JoinColumn(foreignKey = @ForeignKey(name = "SERIES_ADD_ID"), name = "ADDITIONAL_ID", referencedColumnName = "ID")
     private AdditionalDetails additional;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(foreignKey = @ForeignKey(name = "SER_CONTENT_ID"), name = "CONTENT_ID", referencedColumnName = "ID")
     private Content content;
 
