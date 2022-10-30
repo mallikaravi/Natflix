@@ -202,14 +202,14 @@ public class AdminContentController {
 			case 2 -> {
 				Movies movies = ContentDTO.createMoviesModel(contentRequest);
 				movies.setCategory(category);
-				Content findByContentType = contentService.findByContentType(EType.SERIES.name());
+				Content findByContentType = contentService.findByContentType(EType.MOVIES.name());
 				movies.setContent(findByContentType);
 				moviesRepository.save(movies);
 			}
 			case 3 -> {
 				Documentaries documentaries = ContentDTO.createDocumentModel(contentRequest);
 				documentaries.setCategory(category);
-				Content findByContentType = contentService.findByContentType(EType.SERIES.name());
+				Content findByContentType = contentService.findByContentType(EType.DOCUMENTARIES.name());
 				documentaries.setContent(findByContentType);
 				documentariesRepository.save(documentaries);
 			}

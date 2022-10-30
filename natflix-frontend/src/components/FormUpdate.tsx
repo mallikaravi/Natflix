@@ -22,14 +22,15 @@ export default function FormUpdate({ endPoint, fields, data }: iProps) {
   // Methods
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     const editedItem = { ...form, id: data.id };
-    console.log(editedItem);
     event.preventDefault();
     fetch(endPoint + "update/", {
       method:"PUT",
       headers: {
-        "Content-Type": "application/json",
-        "x-access-token": "token-value",
+        "Content-Type": "application/json;charset=UTF-8",
       },
+      mode: "cors",
+      cache: 'no-cache',
+      credentials: 'same-origin',
       body: JSON.stringify(editedItem)
     })
       .then(onSuccess)
