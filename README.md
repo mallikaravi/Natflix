@@ -88,7 +88,33 @@ Prerequisites
 * [Docker](https://www.docker.com/) for building and managing the application distribution using containers
 * [Postman](https://www.postman.com/downloads/) Postman is an API platform for developers to design, build, test and iterate their APIs
 
-ReST API Usage
+About
+============
+Natflix is  a subscription based streaming device that allows all members to watch Tv shows, series and movies.Natflix provides a frontend web page designed to meet our needs , and we shall start from it. The project is developed by React Typescript. Here we should configure our backend to communicate with the frontend to get the webpage that offers a service  to stream videos to the customers and manage the resources.The backend is developed by usingJava Springboot.There are two roles in the project.They are:
+
+1.Admin
+2.Customer
+
+Admin can create,deleteand update the content.Customer can only view the application and play the Movies,Series or Documentaries.
+
+Project Setup
+============
+The frontend is built using ReactTypescript.  
+First you’ll need to setup a Springboot project for Maven to build. 
+
+Implementation and Design
+============
+1 .TypeScript – Coding language for implementing the Natflix Frontend application
+2. React -Framework for building the Graphical User Interface
+3. Eclipse – IDE for backend development
+4. Spring boot- Opensource Framework in Java
+5. Visual Studio - IDE used for developing Frontend
+6. Microsoft word – Document preparation
+
+Explained here 
+
+https://github.com/mallikaravi/ATM/blob/main/design/Bank-ATM-Design.pdf
+R.eST API Usage
 ============
 Request Method | URI | Body (JSON) | Description |  
 :---: | :--- | :---: | :--- |
