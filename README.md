@@ -1,5 +1,3 @@
-[![CI](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ekalinin/github-markdown-toc/actions/workflows/ci.yml)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ekalinin/github-markdown-toc)
 # Natflix
 ### Build and Generate the JAR file (compile the source code)
 ```
@@ -160,6 +158,34 @@ DELETE | http://localhost:8080/api/"/admin-content/delete-episode/{id}" | - | De
 DELETE | http://localhost:8080/api/"/admin-content/delete-movies/{id}" | - | Delete Movie |
 DELETE | http://localhost:8080/api/"/admin-content/delete-documentaries/{id}" | - | Delete Movie |
 
+Smaple REST Request JSON format
+=============
+```
+API: Content Create/Update
+Body: {
+    "id": 9,
+    "title": "Seinfeld (pilot)",
+    "type_id": 3,
+    "category_id": 3,
+    "summary": "Test",
+    "logo_url": "",
+    "poster_url": "",
+    "banner_url": "",
+    "thumbnail_url": "/fake-images/episodes/1.png",
+    "season_number": 1,
+    "episode_number": 1,
+    "video_code": "A72K4M1R1tg",
+    "number_of_oscars": null,
+    "seasons": null
+    }
+     
+API: User Create/Update
+Body:{
+    "name": "Mallika",
+    "email": "mallika@gmail.com",
+    "password": "12345"
+}
+```
 Tool used for project management
 ============
 JIRA tool is used for this project, mainly maintaining the recipe-manager application backlogs. In sort following activities are done
