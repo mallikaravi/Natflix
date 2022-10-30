@@ -22,6 +22,11 @@ export default function FormUpdate({ endPoint, fields }: iProps) {
     event.preventDefault();
     fetch(endPoint + "create/", {
       method: "POST",
+      headers: {
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+      mode: "no-cors",
       body: JSON.stringify(form),
     })
       .then(onSuccess)

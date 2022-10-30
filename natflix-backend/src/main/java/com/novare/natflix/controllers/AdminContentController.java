@@ -121,7 +121,7 @@ public class AdminContentController {
 
 	@PostMapping("/admin-content/create")
 //	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<ContentDTO> create(@Valid @RequestBody ContentDTO contentRequest) throws NatflixException {
+	public ResponseEntity<ContentDTO> create(@RequestBody ContentDTO contentRequest) throws NatflixException {
 
 		saveOrUpdate(contentRequest);
 
@@ -129,8 +129,8 @@ public class AdminContentController {
 	}
 
 	@PutMapping("/admin-content/update")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<ContentDTO> update(@Valid @RequestBody ContentDTO contentRequest) throws NatflixException {
+//	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<ContentDTO> update(@RequestBody ContentDTO contentRequest) throws NatflixException {
 		saveOrUpdate(contentRequest);
 		return ResponseEntity.ok(contentRequest);
 	}
