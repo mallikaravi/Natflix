@@ -1,5 +1,6 @@
 package com.novare.natflix.models;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -17,6 +18,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
+
+import com.novare.natflix.utils.DateUtil;
 
 @Entity
 @Table(name = "user", uniqueConstraints = { @UniqueConstraint(name = "EMAIL", columnNames = "EMAIL") })
@@ -50,16 +53,19 @@ public class User {
 	private Role role;
 
 	public User() {
-
+		createdOn = DateUtil.toDate(LocalDateTime.now());
 	}
-    public User(Long id, String fullName, String email, Role role) {
-        this.id = id;
-        this.fullName = fullName;
-        this.email = email;
-        this.role = role;
-    }
+
+	public User(Long id, String fullName, String email, Role role) {
+		this();
+		this.id = id;
+		this.fullName = fullName;
+		this.email = email;
+		this.role = role;
+	}
 
 	public User(String fullName, String email, String password) {
+		this();
 		this.fullName = fullName;
 		this.email = email;
 		this.password = password;

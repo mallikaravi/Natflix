@@ -30,6 +30,9 @@ public class AdditionalDetails {
     @Column(name = "POSTER_URL")
     private String posterUrl;
 
+    @Column(name = "EPISODE_URL")
+    private String episodeUrl;
+    
     @Column(name = "VIDEO_CODE")
     private String videoCode;
 
@@ -80,7 +83,15 @@ public class AdditionalDetails {
         return posterUrl;
     }
 
-    public void setPosterUrl(String posterUrl) {
+    public String getEpisodeUrl() {
+		return episodeUrl;
+	}
+
+	public void setEpisodeUrl(String episodeUrl) {
+		this.episodeUrl = episodeUrl;
+	}
+
+	public void setPosterUrl(String posterUrl) {
         this.posterUrl = posterUrl;
     }
 
