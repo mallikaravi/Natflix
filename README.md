@@ -115,15 +115,26 @@ Explained here
 
 https://github.com/mallikaravi/Natflix/blob/main/design/Natflix-Documentation.pdf
 
+Architectural Diagram
+============
+Architecture flow of Sprint boot application <br>
+<img src="design/Architecture-flow-of-spring-boot-Applications.png " width="450" height="250"><br>
+Architecture flow of Sprint boot application and React Web application <br>
+<img src="design/Architecture-flow-of-spring-boot-react.png " width="450" height="250">
+
 Usecase Diagram
 ============
-<img src="design/Usecase-natflix.pdf " width="450" height="250">
+<img src="design/UseCase-Diagram.png" width="450" height="250">
 
 Class Diagram
 ============
+<img src="design/Class-Diagram.png" width="450" height="250"><br>
+
+
 
 Model Diagram
 ============
+<img src="design/Model-Diagram.png " width="450" height="250">
 
 REST API Usage
 ============
