@@ -33,7 +33,7 @@ $ cd natflix-frontend
 $ npm install
 $ npm run start
 
-#### NOTE
+NOTE:
 Without Docker env: Change"proxy": "http://localhost:8080/api/" in package.json file
 ```
 #### How to run and build in Docker 
@@ -45,7 +45,7 @@ $ docker compose up --build --force-recreate
 Note: Docker container setup the database enviroenment default data using sql/init.sql file.
 
 - Database: 
-   - User     : test
+   - User     : root
    - Password : root
    - Database Schema: natflix
    - Port : 3306
