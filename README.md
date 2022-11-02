@@ -32,6 +32,9 @@ $ java -jar -Dspring.profiles.active=prod target/natflix-backend-0.0.1.jar
 $ cd natflix-frontend
 $ npm install
 $ npm run start
+
+**NOTE**
+Without Docker env: Change"proxy": "http://localhost:8080/api/" in package.json file
 ```
 #### How to run and build in Docker 
 ```
