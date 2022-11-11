@@ -26,7 +26,7 @@ $ cd Natflix
 # Backend Application: Build and Run the JAR file (compile the source code)
 $ cd natflix-backend
 $ mvn clean package -DskipTests=true
-$ java -jar -Dspring.profiles.active=prod target/natflix-backend-0.0.1.jar
+$ java -jar "-Dspring.profiles.active=prod" target/natflix-backend-0.0.1.jar
 
 # Frontenf Application : Install and run 
 $ cd natflix-frontend
