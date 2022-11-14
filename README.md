@@ -39,7 +39,7 @@ Without Docker env: Change"proxy": "http://localhost:8080/api/" in package.json 
 #### How to run and build in Docker 
 ```
 $ cd Natflix
-$ docker -compose up --build --force-recreate
+$ docker compose up --build --force-recreate
 ```
 #### How to Setup and Access the Database, Backend and Frontend application
 Note: Docker container setup the database enviroenment default data using sql/init.sql file.
